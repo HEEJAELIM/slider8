@@ -1,0 +1,119 @@
+@media (max-width: 768px) {
+  .cd-section {
+    height: auto;
+  }
+  .cd-section > div {
+    height: 100%;
+    position: relative;
+  }
+  .content {
+    background-color: #ddd;
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Header */
+  header {
+    transition: 0.3s;
+    z-index: 100;
+  }
+
+  header.active {
+    background-color: white;
+    border-bottom: 1px solid #000;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .slogan {
+    display: none;
+  }
+
+  .gnb {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    box-shadow: -5px 0 10px #00000064;
+    line-height: 50px;
+    transition: 0.5s;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .menu a {
+    text-align: right;
+    padding-right: 20px;
+    color: #000;
+    font-size: 20px;
+  }
+  .trigger {
+    display: block;
+    width: 24px;
+    height: 14px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .trigger span {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    transition: 0.5s;
+  }
+  .trigger span:first-child {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+  }
+  .trigger span:last-child {
+    top: 100%;
+  }
+  .trigger.active span:first-child {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+    opacity: 0;
+  }
+  .trigger.active span:last-child {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  /* Gototop */
+  .gototop {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+    border: 1px solid #fff;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 2s;
+  }
+  .gototop.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .btn-hiring {
+    right: 20px;
+    bottom: 20px;
+  }
+}

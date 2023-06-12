@@ -1,0 +1,960 @@
+/* Google Web Font : Montserrat */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Rancho&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* FontAwesome CDN 4.7 */
+
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* Default CSS */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/* Entire Layout */
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  height: 100%;
+  position: relative;
+}
+.content {
+  background-color: #ddd;
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  left: 20px;
+  bottom: 20px;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.gnb-inner {
+  /* border: 1px solid #000;/ */
+  width: calc(100% - 40px);
+  margin: auto;
+  height: 60px;
+  line-height: 60px;
+}
+.logo {
+  float: left;
+}
+.gnb {
+  float: right;
+}
+.menu {
+  display: none;
+}
+.menu a {
+}
+.slogan {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.trigger {
+  display: none;
+}
+
+/* Hiring Button */
+.btn-hiring {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  padding: 10px 20px;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #000;
+  color: #fff;
+  transition: 0.5s;
+}
+.btn-hiring:active {
+  transform: scale(0);
+}
+
+/* Section : Home */
+.home-inner {
+  background-color: #fff;
+  height: 100%;
+}
+.home-inner:before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  animation: overlay 0.8s 2.2s ease-in-out both;
+}
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 100%;
+    left: 100%;
+  }
+}
+.welecome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  animation: slideup 2s 0.2s linear both;
+  /* animation-fill-mode: both; */
+}
+.welecome-text span {
+  display: block;
+  font-size: 26px;
+  text-align: center;
+}
+.welecome-text span .fas {
+  color: crimson;
+}
+.opacity-image {
+  background: url(images/section-bg-01.jpg) no-repeat center center;
+  height: 100%;
+  background-size: cover;
+  opacity: 0;
+  animation: opacity-image 1s 2.6s ease-in-out both;
+}
+@keyframes opacity-image {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home-heading {
+  position: absolute;
+  top: 50%;
+  left: 650px;
+  transform: translate(-50%, -50%);
+}
+.home-heading span {
+  display: block;
+  font-size: 115px;
+  color: #fff;
+  font-weight: 600;
+  width: 0;
+  overflow: hidden;
+  animation: reveal 1s 3s ease-in-out both;
+}
+.home-heading span:first-child {
+  animation-delay: 3.05s;
+}
+.home-heading span:nth-child(2) {
+  animation-delay: 3.2s;
+}
+.home-heading span:last-child {
+  animation-delay: 3.35s;
+}
+
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  30% {
+    opacity: 0.8;
+    margin-top: 0;
+  }
+  60% {
+    opacity: 0.1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Section : about */
+.about-inner {
+  background: url(images/line-drawing.png) no-repeat right bottom;
+  height: 100%;
+  background-color: #0dace3;
+}
+.about-items {
+  width: 60%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 120px;
+}
+.item {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.item:hover img {
+  filter: invert(0);
+}
+.item:hover h3 {
+  color: #000;
+  letter-spacing: 1.5px;
+}
+.item img {
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+  filter: invert(1);
+  transition: 0.3s;
+}
+.item h3 {
+  font-size: 27px;
+  font-weight: 500;
+  margin: 0;
+  transition: 0.3s;
+  letter-spacing: -1px;
+}
+.item span {
+}
+.item p {
+  overflow: hidden;
+  font-size: 18px;
+}
+
+/* section : project */
+.project-inner {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.tabs {
+  height: 100%;
+  width: 300%;
+  transition: 0.3s;
+}
+.tab {
+  height: 100%;
+  float: left;
+  width: 33.3333%;
+}
+.tab > div {
+  height: 100%;
+  float: left;
+}
+.project-info {
+  width: 25%;
+}
+.project-photo {
+  width: 75%;
+  overflow: hidden;
+}
+input[name="tabmenu"] {
+  display: none;
+}
+.btn {
+  position: absolute;
+  left: 0px;
+  bottom: 30px;
+  width: 25%;
+  text-align: center;
+}
+.btn label {
+  cursor: pointer;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #000;
+  display: inline-block;
+  margin: 7px;
+  position: relative;
+}
+.btn label:before {
+  content: "";
+  display: inline-block;
+  border: 1px solid transparent;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  transition: 0.3s;
+}
+.btn label:hover:before {
+  border: 1px solid #aaa;
+}
+
+input[id="tab1"]:checked ~ .btn label[for="tab1"]:before,
+input[id="tab2"]:checked ~ .btn label[for="tab2"]:before,
+input[id="tab3"]:checked ~ .btn label[for="tab3"]:before {
+  border: 1px solid #aaa;
+}
+
+input[id="tab1"]:checked ~ .tabs {
+  margin-left: 0;
+}
+
+input[id="tab2"]:checked ~ .tabs {
+  margin-left: -100%;
+}
+input[id="tab3"]:checked ~ .tabs {
+  margin-left: -200%;
+}
+
+/* Project info */
+.project-info {
+  padding: 50px;
+  position: relative;
+}
+.project-info h3 {
+  font-size: 20px;
+  position: relative;
+}
+.project-info p {
+  font-size: 16px;
+  line-height: 30px;
+}
+.project-info ul {
+  line-height: 2em;
+  margin: 50px 0;
+}
+.project-info ul li {
+}
+.project-info ul li b {
+  margin-left: 8px;
+}
+.detail {
+  margin-bottom: 50px;
+}
+.detail div {
+  width: 32.5%;
+  display: inline-block;
+  text-align: center;
+  color: #999;
+}
+.detail div span {
+  font-size: 36px;
+  font-weight: bold;
+  display: block;
+  color: #000;
+  margin-bottom: 10px;
+}
+.view-project {
+  background: #3f3f3f;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  width: 200px;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+.view-project:hover {
+  background: #000;
+}
+.view-project .fas {
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.view-project:hover .fas {
+  margin-left: 30px;
+}
+
+.project-info:before {
+  content: attr(data-text);
+  font-size: 130px;
+  color: #dddddd7c;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+/* Section : plan */
+.plan-inner {
+  background-color: #1d1b2f;
+  height: 100%;
+}
+.plan-feature {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plan-feature > div {
+  height: 300px;
+  color: #bbb;
+}
+.plan-info {
+}
+
+.plan-info div {
+  float: left;
+}
+.paln-heading {
+  width: 70%;
+  padding-right: 50px;
+}
+.paln-heading h2,
+.history-info h2 {
+  color: #fff;
+  margin: 0;
+}
+.paln-heading p {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+.paln-heading hr.bar,
+.history-info hr.bar {
+  background-color: dodgerblue;
+  display: inline-block;
+}
+.history-slider {
+}
+.history-slider div h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.5em;
+}
+.history-slider div h4 span {
+  color: dodgerblue;
+}
+.history-slider div h4 p {
+}
+.plan-photo {
+  width: 30%;
+}
+.plan-photo img {
+  height: 275px;
+}
+
+.history-info {
+}
+
+/* Slick.js Custom CSS */
+.history-slider .slick-arrow {
+  display: none !important;
+}
+.history-slider .slick-dots li button:before {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* Section : awards winner */
+.awards-inner {
+  height: 100%;
+  border: 1px solid #ddd;
+}
+.awards-inner > div {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.about-awards {
+  background-color: #1a1f24;
+  color: #fff;
+}
+.about-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 70%;
+}
+.victory-jump {
+  background-color: white;
+}
+.victory-jump img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.about-heading h2 {
+  margin: 0;
+}
+
+.bar {
+  width: 50px;
+  height: 4px;
+  border: none;
+  background-color: crimson;
+  margin: 20px auto;
+}
+
+.about-heading p {
+  color: #999;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+.about-heading a {
+  color: #bbb;
+  border: 1px solid #bbb;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.about-heading:hover {
+  background-color: #16314b;
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Section : location */
+.location-inner {
+  background: url(images/background-location.jpg) no-repeat center center;
+  height: 100%;
+}
+.location-inner:before {
+  content: "";
+  background-color: #000000ca;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* :before는 인라인요소 이기때문에 position:absolute을 줌  */
+}
+.feature {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #bbb;
+}
+.feature > div {
+  float: left;
+}
+.office {
+  width: 60%;
+  padding-right: 100px;
+}
+.service {
+  width: 40%;
+}
+.office b {
+  font-weight: nomal;
+}
+.office h2 {
+  color: #1db1f0;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 5px;
+}
+.office p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.office span {
+  color: #fff;
+}
+.customer {
+  margin-top: 40px;
+}
+.service-item {
+  margin-bottom: 40px;
+}
+.service-item .fa {
+  color: #1db1f0;
+  font-size: 40px;
+}
+.service-item h3 {
+  color: #fff;
+  font-size: 22px;
+  margin: 0;
+}
+.service-item p {
+}
+
+/* Section : contact */
+.contact-inner {
+  background-color: #fff;
+  height: 100%;
+  border: 1px solid #ddd;
+}
+.contact-feature {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact-feature > div {
+  height: 400px;
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+.contact-form {
+}
+.contact-form h3 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+.contact-form h3 b {
+}
+.send-box {
+}
+.send-box {
+}
+.send-box label {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+  margin-top: 20px;
+}
+.send-box label span {
+  color: crimson;
+  font-weight: normal;
+}
+.send-box input[type="email"],
+.send-box input[type="text"],
+.send-box textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  width: 100%;
+  transition: 0.3s;
+}
+.send-box input[type="email"]:hover,
+.send-box input[type="text"]:hover,
+.send-box textarea:hover,
+.send-box input[type="email"]:focus,
+.send-box input[type="text"]:focus,
+.send-box textarea:focus {
+  border: 1px solid #0088cc;
+  box-shadow: 0 0 5px #0088cc;
+}
+
+.send-box button {
+  background-color: #0088cc;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.send-box button:hover {
+  background-color: #000;
+}
+.contact-info {
+}
+.contact-info h4 {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+}
+.contact-info h4 b {
+}
+.contact-info ul {
+}
+.contact-info ul li {
+  line-height: 2em;
+}
+.contact-info ul li:last-child {
+  color: #0088cc;
+}
+.contact-info p {
+  line-height: 1.5em;
+}
+
+/* subPage : Hiring */
+.modal {
+}
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+}
+.header-inner {
+  width: 95%;
+  margin: auto;
+  height: 90px;
+  line-height: 90px;
+  border-bottom: 1px solid #ddd;
+}
+.modal-display {
+  font-size: 16px;
+}
+.hiring-main {
+  height: 600px;
+  position: relative;
+}
+.hiring-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hiring-heading span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+.hiring-heading span:before,
+.hiring-heading span:after {
+  content: "";
+  height: 2px;
+  background-color: #000;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  right: 115%;
+}
+.hiring-heading span:after {
+  left: 115%;
+}
+.hiring-heading h1 {
+  font-size: 100px;
+  font-weight: 200;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.hiring-info {
+  overflow: hidden;
+}
+.hiring-info > div {
+  float: left;
+  width: 50%;
+  height: 60vh;
+}
+.center-parent {
+  position: relative;
+}
+.center-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+}
+.center-child h2 {
+  font-size: 36px;
+  font-weight: normal;
+}
+.center-child p {
+  font-size: 20px;
+  font-weight: 300;
+}
+/* .photo {
+  background: url(images/hiring-main-01-01.jpg) no-repeat center center;
+  background-size: cover;
+}
+.photo2 {
+  background: url(imasges/hiring-main-01-02.jpg) no-repeat center center;
+  background-size: cover;
+} */
+
+.photo img,
+.photo2 img {
+  width: 100%;
+}
+
+.hiring-slogan {
+  padding: 150px 0;
+}
+.hiring-slogan p {
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  position: relative;
+}
+.hiring-slogan p:before {
+  font-family: "Lato", sans-serif;
+  content: ",,";
+  font-size: 190px;
+  position: absolute;
+  color: #ddd;
+  transform: rotate(180deg);
+  top: -38px;
+  left: -52px;
+}
+.hiring-contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.hiring-contact ul li:first-child {
+  font-weight: 400;
+}
+.hiring-contact ul li:last-child {
+  color: dodgerblue;
+}
+
+.sns {
+}
+.sns a {
+  font-size: 15px;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  margin: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+.sns a::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  /* transform: scale(0); 따로 못 씀*/
+}
+
+.sns a:hover {
+  color: #fff;
+}
+
+.sns a:hover:before {
+  transform: translateX(-50%) scale(1);
+}
+.sns a:nth-child(1):before {
+  background-color: #1877f2;
+}
+.sns a:nth-child(2):before {
+  background-color: #1da1f2;
+}
+.sns a:nth-child(3):before {
+  background-color: #0a66c2;
+}
+.sns a:nth-child(4):before {
+  background-color: #e4405f;
+}
+.sns a:nth-child(5):before {
+  background-color: #cd201f;
+}
+.sns a:nth-child(6):before {
+  background-color: #f57d00;
+}
+
+/* SubPage : Hirring */
+.hiring-main.project-main1 {
+  background: url(images/project-main-01-01.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+.hiring-main.project-main2 {
+  background: url(images/project-main-02-01.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+.hiring-main.project-main3 {
+  background: url(images/project-main-03-01.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+.hiring-main.project-main1 .hiring-heading,
+.hiring-main.project-main2 .hiring-heading,
+.hiring-main.project-main3 .hiring-heading {
+  color: #fff;
+  width: 100%;
+  animation: slidedown 0.7s linear both;
+}
+.hiring-main.project-main1 .hiring-heading h1,
+.hiring-main.project-main2 .hiring-heading h1,
+.hiring-main.project-main3 .hiring-heading h1 {
+  font-size: 50px;
+}
+
+@keyframes slidedown {
+  from {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+.photo.project-info {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 60px 0;
+}
+.photo.project-info .fas {
+  margin-right: 7px;
+  opacity: 0.8;
+}
+.project-detail .hiring-slogan p:before {
+  top: -37px;
+  left: -77px;
+}
+
+.project-detail .hiring-heading span:before,
+.project-detail .hiring-heading span:after {
+  background-color: #fff;
+}
